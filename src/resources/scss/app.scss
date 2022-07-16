@@ -1,7 +1,7 @@
 @import 'variables';
 
 h1 {
-    color: rgb(211, 111, 148);
+    color: rgb(231, 87, 48);
 }
 
 h2 {
@@ -13,6 +13,16 @@ h4 {
     color: rgb(237, 226, 230);
 }
 
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.card-course-item{
+    background-color: black;
+    background-attachment: fixed;
+}
+
 .user-avatar {
     width: 28px;
     height: 28px;
@@ -21,9 +31,48 @@ h4 {
 }
 
 a {
-    color: gainsboro;
+
+    color:  rgb(231, 87, 48);
+    text-decoration: none;
+}
+
+p{
+    color: gray;
 }
 
 .card-course-item {
     margin-top: 16px
+}
+
+.tenphim {
+    color: darkgoldenrod;
+    font-size: 25px;
+}
+
+:root {
+    --tieude: rgb(185, 107, 61);
+}
+
+.text {
+    color: darkgrey
+}
+
+.tenphim {
+    color: darkgoldenrod;
+    font-size: 25px;
+    
+}
+
+.button {
+    margin: 20px 0;
+    background: #0F1014;
+    color: rgb(247, 247, 247);
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid gray;
 }
