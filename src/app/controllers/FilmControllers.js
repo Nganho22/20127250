@@ -9,16 +9,17 @@ class FilmControllers {
     show(req, res, next){
         Film.findOne({slug: req.params.slug})
             .then(film => {
+                
                 // Review.find({})
                 //     .then(reviews=> 
 
-                //         {
-                //             res.render('home', {
-                //                 films : mutipleMongooseToObject(films)
-                //             })
+                //     {
+                //              res.render('films/show', {
+                //              reviews : mutipleMongooseToObject(reviews), film: mongooseToOBject(film)
+                //              })
                 //         }
                 //     )
-                 //   .catch(next)
+
                 res.render('films/show', {film: mongooseToOBject(film)})
             })
             .catch(next)
