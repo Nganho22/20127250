@@ -1,20 +1,16 @@
 <div class="mt-4">
-  <h3>
-    Dang phim
-  </h3>
-  <form method="GET" action="">
-    <div class="form-group">
-      <label for="name:">Ten phim</label>
-      <input type="text" class="form-control" id="name" placeholder="name">
-    </div>
-    <div class="form-group">
-      <label for="despription:">Mo ta phim</label>
-      <input type="text" class="form-control" id="despription" placeholder="despription">
-    </div>
-    <div class="form-group">
-      <label for="image:">Anh phim</label>
-      <input type="text" class="form-control" id="image" placeholder="image">
-    </div>
-    <button type="text" class="btn btn-primary">Them phim</button>
+  <h2>
+    Dang bai review
+  </h2>
+  <form method="POST" action="films/store">
+      <div class="form-group">
+        <label for="despription:">Mo ta phim</label>
+        <input type="text" class="form-control" id="despription" placeholder="despription">
+      </div>
+      <div class="form-group">
+        <label for="image:">Anh phim</label>
+        <input type="text" class="form-control" id="image" placeholder="image">
+      </div>
+      <button type="text" class="btn btn-primary">Dang</button>
   </form>
 </div>
