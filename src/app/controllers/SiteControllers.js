@@ -1,14 +1,14 @@
-const Course = require('../models/Course')
+const Film = require('../models/Film')
 const { mutipleMongooseToObject } = require('../../util/mongoose')
 
 class SiteControllers {
     index(req, res, next) {
-        Course.find({})
-            .then(courses=> 
+        Film.find({})
+            .then(films=> 
 
                 {
                     res.render('home', {
-                        courses : mutipleMongooseToObject(courses)
+                        films : mutipleMongooseToObject(films)
                     })
                 }
             )

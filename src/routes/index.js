@@ -1,10 +1,10 @@
 const newControllers = require('./news')
 const siteControllers = require('./site')
-const courseControllers = require('./courses')
+const filmControllers = require('./films')
 
 function route(app) {
     app.use('/news', newControllers)
-    app.use('/course', courseControllers)
+    app.use('/film', filmControllers)
     app.use('/', siteControllers)
 }
 

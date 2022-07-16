@@ -1,7 +1,7 @@
 const { mongooseToOBject } = require("../../util/mongoose");
-const Course = require("../models/Course");
+const Film = require("../models/Film");
 
-class CourseControllers {
+class FilmControllers {
     index(req, res, next) {
         res.render('home');
     }
@@ -10,4 +10,4 @@ class CourseControllers {
     }
 }
 
-module.exports = new CourseControllers();
+module.exports = new FilmControllers();
