@@ -1,15 +1,22 @@
 
 const mongoose = require('mongoose')
+const slug = require('mongoose-slug-generator')
 const Schema = mongoose.Schema
+mongoose.plugin(slug)
+
 
 const Film = new Schema({
-    name: { type: String, maxLength: 255 },
-    description: { type: String, maxLength: 600 },
-    image: { type: String, maxLength: 255 }, 
-    slug: {type: String, maxLenght: 255},
-    id: {type: String, maxLenght: 3},
-    trailerid:{type: String, maxLenght: 255},
-    trailers:{type: String, maxLenght: 255},
+
+    title: { type: String, required: true },
+    //name: { type: String, maxLength: 255 },
+    description: { type: String },
+    img: { type: String },
+    trailer: { type: String },
+    score: { type: Number },
+    //image: { type: String, maxLength: 255 }, 
+    slug: { type: String, slug: 'title', unique: true },
+}, {
+    timestamps: true,
     //createdAt: { type: Data, default: Date.now },
     //updatedAt: { type: Data, default: Date.now },
 })

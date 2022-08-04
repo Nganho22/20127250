@@ -1,4 +1,5 @@
 const Film = require('../models/Film')
+//const Review = require('../models/Review')
 const { mutipleMongooseToObject } = require('../../util/mongoose')
 
 class SiteControllers {
@@ -13,11 +14,19 @@ class SiteControllers {
                 }
             )
             .catch(next)
-        //res.json({
-         //   name: 'test'
-        //})
-        //res.render('home');
     }
+    // index2(req, res, next) {
+    //     Review.find({})
+    //         .then(reviews=> 
+
+    //             {
+    //                 res.render('home', {
+    //                     films : mutipleMongooseToObject(reviews)
+    //                 })
+    //             }
+    //         )
+    //         .catch(next)
+    // }
     search(req, res) {
         res.render('search');
     }

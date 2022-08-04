@@ -1,14 +1,19 @@
 
 const mongoose = require('mongoose')
+const slug = require('mongoose-slug-generator')
 const Schema = mongoose.Schema
-
+mongoose.plugin(slug)
 
 const Review = new Schema({
-    noidung: {type: String, maxLenght: 600},
-    image: { type: String, maxLength: 255 }, 
-    ava: { type: String, maxLength: 255 },
-    ngdang: { type: String, maxLength: 255 },
-    idphim: {type: String, maxLenght: 3},
+    content: {type: String},
+    filmname: {type: String},
+    like: {type: Number},
+    userava: {type: String},
+    username: {type: String},
+    filmid: {type: String}
+},{
+    timestamps: true,
 })
 
 module.exports = mongoose.model('Review', Review)
+

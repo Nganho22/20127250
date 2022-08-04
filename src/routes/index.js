@@ -1,10 +1,15 @@
-const newControllers = require('./news')
+const reviewControllers = require('./reviews')
 const siteControllers = require('./site')
 const filmControllers = require('./films')
+//const reviewControllers = require('./reviews')
+//const reviewControllers = require('./reviews')
+//const reviewControllers = require('./reviews')
+//const reviewControllers = require('./reviews')
 
 function route(app) {
-    app.use('/news', newControllers)
+    app.use('/review', reviewControllers)
     app.use('/film', filmControllers)
+   //app.use('/review', reviewControllers)
     app.use('/', siteControllers)
 }
 

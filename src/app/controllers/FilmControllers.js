@@ -1,11 +1,22 @@
 const { mongooseToOBject } = require("../../util/mongoose");
 const Film = require("../models/Film");
-const Review = require("../models/Review")
 
 
 class FilmControllers {
 
-   // /films/:slug
+//     update(req,res,next){
+//         Film.findById(req.params.id)
+//             .then(film => {
+//                 res.render('films/update', {film: mongooseToOBject(film)})
+//             })
+//             .catch(next)
+//     }
+//         submit(req, res, next) {
+//         Film.updateOne({_id: req.params.id}, req.body)
+//             .then(() => res.redirect('/me/stored/films'))
+//             .catch(next)
+//     }
+//    // /films/:slug
     show(req, res, next){
         Film.findOne({slug: req.params.slug})
             .then(film => {
@@ -19,7 +30,6 @@ class FilmControllers {
                 //              })
                 //         }
                 //     )
-
                 res.render('films/show', {film: mongooseToOBject(film)})
             })
             .catch(next)
@@ -38,14 +48,14 @@ class FilmControllers {
 
     // }
     create(req, res, next) {
-        res.render('create')
+        res.send("HIII")
     
     }
 
-    store(req, res, next) {
-       res.json(req.body)
+    // store(req, res, next) {
+    //    res.json(req.body)
     
-    }
+    // }
 
 }
 
