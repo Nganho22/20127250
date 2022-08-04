@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const slug = require('mongoose-slug-generator')
 const Schema = mongoose.Schema
 mongoose.plugin(slug)
+const Review = require('./Review')
 
 
 const Film = new Schema({
